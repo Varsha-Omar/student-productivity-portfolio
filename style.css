@@ -1,0 +1,47 @@
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f4f4f4;
+text-align:center;
+}
+
+nav{
+background:#0077b6;
+color:white;
+padding:15px;
+}
+
+nav ul{
+list-style:none;
+padding:0;
+}
+
+nav ul li{
+display:inline;
+margin:10px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+}
+
+.hero{
+padding:40px;
+}
+
+img{
+width:180px;
+border-radius:50%;
+}
+
+button{
+padding:10px 20px;
+background:#0077b6;
+color:white;
+border:none;
+cursor:pointer;
+border-radius:5px;
+}
+
+button:hover
