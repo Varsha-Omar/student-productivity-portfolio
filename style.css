@@ -1,47 +1,222 @@
 body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#f4f4f4;
-text-align:center;
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#e0f7ff,#f4f4f4);
+    color:#000;
+    text-align:center;
 }
 
+/* ---------------- DARK MODE ---------------- */
+body.dark{
+    background:#121212;
+    color:#ffffff;
+}
+
+body.dark .hero,
+body.dark .about,
+body.dark .projects,
+body.dark .contact{
+    background:#1e1e1e;
+    color:#ffffff;
+}
+
+/* ---------------- SMOOTH SCROLL ---------------- */
+html{
+    scroll-behavior:smooth;
+}
+
+/* ---------------- NAVBAR ---------------- */
 nav{
-background:#0077b6;
-color:white;
-padding:15px;
+    background:#0077b6;
+    color:white;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+body.dark nav{
+    background:#0d47a1;
 }
 
 nav ul{
-list-style:none;
-padding:0;
-}
-
-nav ul li{
-display:inline;
-margin:10px;
+    list-style:none;
+    padding:0;
+    display:flex;
+    gap:20px;
 }
 
 nav ul li a{
-color:white;
-text-decoration:none;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-.hero{
-padding:40px;
+nav ul li a:hover{
+    color:#ffd700;
 }
 
+/* ---------------- SECTIONS ---------------- */
+.hero,
+.about,
+.projects,
+.contact{
+    background:white;
+    margin:40px auto;
+    padding:50px;
+    max-width:900px;
+    border-radius:12px;
+    box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+}
+
+body.dark .hero,
+body.dark .about,
+body.dark .projects,
+body.dark .contact{
+    background:#1e1e1e;
+}
+
+/* ---------------- IMAGE ---------------- */
 img{
-width:180px;
-border-radius:50%;
+    width:160px;
+    border-radius:50%;
+    border:4px solid #0077b6;
+    margin-top:20px;
 }
 
+/* ---------------- BUTTON ---------------- */
 button{
-padding:10px 20px;
-background:#0077b6;
-color:white;
-border:none;
-cursor:pointer;
-border-radius:5px;
+    padding:10px 20px;
+    background:#0077b6;
+    color:white;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+    margin-top:15px;
+    transition:0.3s;
 }
 
-button:hover
+button:hover{
+    background:#023e8a;
+    transform:translateY(-3px);
+}
+
+/* ---------------- NAV BUTTON ---------------- */
+nav button{
+    background:#023e8a;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+nav button:hover{
+    background:#001f3f;
+}
+
+/* ---------------- LINKS ---------------- */
+a{
+    text-decoration:none;
+    color:#0077b6;
+    font-weight:bold;
+    margin:5px;
+}
+
+a:hover{
+    color:#023e8a;
+}
+
+/* ---------------- PROJECTS GRID ---------------- */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+}
+
+/* ---------------- CARDS ---------------- */
+.card{
+    background:#f4f4f4;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0px 5px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+body.dark .card{
+    background:#2a2a2a;
+    color:#fff;
+}
+
+/* ---------------- CONTACT ---------------- */
+.contact{
+    max-width:500px;
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:18px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+.contact textarea{
+    resize:none;
+}
+
+.contact button{
+    width:100%;
+    padding:12px;
+    font-size:17px;
+    background:#0077b6;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.contact button:hover{
+    background:#023e8a;
+}
+
+/* ---------------- MOBILE RESPONSIVE ---------------- */
+@media (max-width:768px){
+
+    nav{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    nav ul{
+        flex-direction:column;
+        gap:10px;
+        margin-top:10px;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .card{
+        width:90%;
+    }
+
+    .contact{
+        width:90%;
+    }
+}
