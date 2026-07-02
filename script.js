@@ -22,3 +22,33 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     alert("Form submitted successfully!");
     this.reset();
 });
+function addTask() {
+
+    let taskInput = document.getElementById("taskInput");
+
+    let task = taskInput.value.trim();
+
+    if (task === "") {
+
+        alert("Please enter a task!");
+
+        return;
+    }
+
+    let li = document.createElement("li");
+
+    li.innerHTML = `
+        ${task}
+        <button onclick="removeTask(this)">Delete</button>
+    `;
+
+    document.getElementById("taskList").appendChild(li);
+
+    taskInput.value = "";
+}
+
+function removeTask(button) {
+
+    button.parentElement.remove();
+
+}
