@@ -8,17 +8,21 @@ This project is developed as part of my Web Development Internship.
 * CSS3
 * JavaScript
 
-## Task Completed
+## Completed Tasks
 
-✅ Task 1 - Home Page
-
-### Features
+### ✅ Task 1
 
 * Navigation Bar
 * Introduction Section
 * Profile Image
 * LinkedIn & GitHub Links
 * JavaScript Alert Button
-* Basic CSS Styling
+
+### ✅ Task 2
+
+* Contact Form
+* JavaScript Form Validation
+* Responsive Design
+* Improved UI with CSS
 
 More features will be added in upcoming tasks.
