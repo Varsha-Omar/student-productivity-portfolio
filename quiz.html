@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | Student Productivity & Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>Student Productivity & Portfolio</h2>
+</nav>
+
+<section class="quiz">
+
+    <h1>JavaScript Quiz</h1>
+
+    <div id="quizBox">
+
+        <!-- Progress Bar -->
+        <div style="width:100%; background:#ddd; height:10px; border-radius:5px; margin-bottom:10px;">
+            <div id="progressBar" style="width:0%; height:10px; background:green; border-radius:5px;"></div>
+        </div>
+
+        <!-- Timer -->
+        <h3 id="timer">⏱️ Time: 10</h3>
+
+        <!-- Question -->
+        <h2 id="question"></h2>
+
+        <!-- Options -->
+        <button class="option"></button>
+        <button class="option"></button>
+        <button class="option"></button>
+        <button class="option"></button>
+
+        <!-- Next -->
+        <button id="nextBtn" style="display:none;">Next</button>
+
+    </div>
+
+    <!-- Result -->
+    <div id="result" style="display:none;"></div>
+
+    <button onclick="restartQuiz()">Restart</button>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>iska currect codequiz.html
