@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+
+        <h2>Product Gallery</h2>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+        </ul>
+
+    </nav>
+
+    <h1>Our Products</h1>
+
+    <div class="controls">
+
+        <select id="categoryFilter" onchange="filterProducts()">
+
+            <option value="all">All Categories</option>
+            <option value="Laptop">Laptop</option>
+            <option value="Mobile">Mobile</option>
+            <option value="Accessories">Accessories</option>
+
+        </select>
+
+        <select id="sortPrice" onchange="sortProducts()">
+
+            <option value="default">Sort by Price</option>
+            <option value="low">Low to High</option>
+            <option value="high">High to Low</option>
+
+        </select>
+
+        <select id="sortRating" onchange="sortByRating()">
+
+            <option value="default">Sort by Rating</option>
+            <option value="high">High to Low ⭐</option>
+            <option value="low">Low to High ⭐</option>
+
+        </select>
+
+    </div>
+
+    <div id="productContainer" class="products">
+
+        <div class="card" data-category="Laptop" data-price="55000" data-rating="4.8">
+            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300" alt="Laptop">
+            <h3>Laptop</h3>
+            <p>Price: ₹55,000</p>
+            <p>⭐ Rating: 4.8</p>
+        </div>
+
+        <div class="card" data-category="Mobile" data-price="25000" data-rating="4.5">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300" alt="Mobile">
+            <h3>Mobile</h3>
+            <p>Price: ₹25,000</p>
+            <p>⭐ Rating: 4.5</p>
+        </div>
+
+        <div class="card" data-category="Accessories" data-price="2000" data-rating="4.3">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Headphones">
+            <h3>Headphones</h3>
+            <p>Price: ₹2,000</p>
+            <p>⭐ Rating: 4.3</p>
+        </div>
+
+        <div class="card" data-category="Accessories" data-price="3500" data-rating="4.6">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300" alt="Smart Watch">
+            <h3>Smart Watch</h3>
+            <p>Price: ₹3,500</p>
+            <p>⭐ Rating: 4.6</p>
+        </div>
+
+        <div class="card" data-category="Mobile" data-price="18000" data-rating="4.2">
+            <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?w=300" alt="Smartphone">
+            <h3>Smartphone</h3>
+            <p>Price: ₹18,000</p>
+            <p>⭐ Rating: 4.2</p>
+        </div>
+
+        <div class="card" data-category="Laptop" data-price="72000" data-rating="4.9">
+            <img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=300" alt="Gaming Laptop">
+            <h3>Gaming Laptop</h3>
+            <p>Price: ₹72,000</p>
+            <p>⭐ Rating: 4.9</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
