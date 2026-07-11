@@ -35,16 +35,55 @@ document.addEventListener("DOMContentLoaded", function () {
     /* ---------------- TO DO LIST ---------------- */
 
     window.addTask = function () {
-        let taskInput = document.getElementById("taskInput");
 
-        if (!taskInput) return;
+    let taskInput = document.getElementById("taskInput");
 
-        let task = taskInput.value.trim();
+    if (!taskInput) return;
 
-        if (task === "") {
-            alert("Please enter a task!");
-            return;
-        }
+    let task = taskInput.value.trim();
+
+    if (task === "") {
+        alert("Please enter a task!");
+        return;
+    }
+
+    let li = document.createElement("li");
+
+    li.innerHTML = `
+        ${task}
+        <button onclick="removeTask(this)">Delete</button>
+    `;
+
+    document.getElementById("taskList").appendChild(li);
+
+    saveTasks();   // ✅ Local Storage Save
+
+    taskInput.value = "";
+};
+
+window.removeTask = function (button) {
+
+    button.parentElement.remove();
+
+    saveTasks();   // ✅ Update Local Storage
+};
+
+function saveTasks() {
+
+    let tasks = [];
+
+    document.querySelectorAll("#taskList li").forEach(li => {
+        tasks.push(li.childNodes[0].textContent.trim());
+    });
+
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function loadTasks() {
+
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    tasks.forEach(task => {
 
         let li = document.createElement("li");
 
@@ -55,12 +94,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.getElementById("taskList").appendChild(li);
 
-        taskInput.value = "";
-    };
+    });
 
-    window.removeTask = function (button) {
-        button.parentElement.remove();
-    };
+}
+
+if (document.getElementById("taskList")) {
+    loadTasks();
+}
 
     /* ---------------- QUIZ APP ---------------- */
 
@@ -266,4 +306,89 @@ async function getWeather() {
     } catch (error) {
         card.innerHTML = "⚠️ Error fetching weather data";
     }
+}
+/* ================= PRODUCT FILTER ================= */
+
+function filterProducts() {
+
+    let category = document.getElementById("categoryFilter").value;
+    let products = document.querySelectorAll(".products .card");
+
+    products.forEach(card => {
+
+        if (category === "all") {
+            card.style.display = "block";
+        }
+
+        else if (card.dataset.category === category) {
+            card.style.display = "block";
+        }
+
+        else {
+            card.style.display = "none";
+        }
+
+    });
+
+}
+
+/* ================= PRODUCT SORT ================= */
+
+function sortProducts() {
+
+    let option = document.getElementById("sortPrice").value;
+
+    let container = document.getElementById("productContainer");
+
+    let cards = Array.from(container.querySelectorAll(".card"));
+
+    cards.sort((a, b) => {
+
+        let priceA = Number(a.dataset.price);
+
+        let priceB = Number(b.dataset.price);
+
+        if (option === "low") {
+
+            return priceA - priceB;
+
+        }
+
+        else if (option === "high") {
+
+            return priceB - priceA;
+
+        }
+
+        else {
+
+            return 0;
+
+        }
+
+    });
+
+    cards.forEach(card => container.appendChild(card));
+
+}
+
+ // Scroll To Top Button
+
+let topButton = document.getElementById("topBtn");
+
+// Show button when user scrolls down
+window.onscroll = function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        topButton.style.display = "block";
+    } else {
+        topButton.style.display = "none";
+    }
+};
+
+// Scroll smoothly to the top
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 }
