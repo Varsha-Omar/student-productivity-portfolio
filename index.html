@@ -12,9 +12,11 @@
     <h2>Student Productivity & Portfolio</h2>
     <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="todo.html">To-Do</a></li>
         <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="products.html">Products</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
 </nav>
@@ -23,6 +25,13 @@
 <section class="hero">
 
     <h1>Welcome to My Portfolio Website</h1>
+    <p>
+Web Developer | Java Programmer | B.Tech CSE Student
+</p>
+
+<p>
+Building responsive websites, Java projects and interactive web applications.
+</p>
 
     <p>
         Hello! I am Varsha Omar, a B.Tech CSE student.
@@ -42,18 +51,74 @@
 
     <a href="https://drive.google.com/file/d/1lEIfmJhEBROq6NJWciwKjBmW0z4s-6wX/view?usp=drivesdk" download>
     <button>Download Resume</button>
+    <br><br>
+
+<a href="todo.html">
+<button>To-Do App</button>
+</a>
+
+<a href="quiz.html">
+<button>Quiz App</button>
+</a>
+
+<a href="products.html">
+<button>Products</button>
+</a>
     </a>
 
     <button onclick="showMessage()">Click Me</button>
 
 </section>
-<section class="about">
+
+  
+<!-- ABOUT SECTION -->
+<section class="about" id="about">
     <h2>About Me</h2>
+
     <p>
         I am Varsha Omar, a B.Tech Computer Science student.
-        I am learning web development, Java, and DSA.
-        I love building simple and useful projects.
+        I am learning Web Development, Java, and Data Structures & Algorithms.
+        I enjoy building responsive websites and interactive web applications.
     </p>
+</section>
+
+<!-- SKILLS SECTION -->
+<section class="skills" id="skills">
+
+    <h2>My Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="skill-card">
+            <h3>HTML5</h3>
+            <div class="progress">
+                <div class="progress-bar html">95%</div>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <h3>CSS3</h3>
+            <div class="progress">
+                <div class="progress-bar css">90%</div>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <h3>JavaScript</h3>
+            <div class="progress">
+                <div class="progress-bar js">80%</div>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <h3>Java</h3>
+            <div class="progress">
+                <div class="progress-bar java">85%</div>
+            </div>
+        </div>
+
+    </div>
+
 </section>
 
 <!-- PROJECTS SECTION -->
@@ -84,5 +149,19 @@
 
 <script src="script.js"></script>
 
+ 
+
+<div class="card">
+    <h3>Product Gallery</h3>
+    <p>Filter and sort products using JavaScript.</p>
+
+    <a href="products.html">
+        <button>Open Project</button>
+    </a>
+</div>   
+<footer class="footer">
+    <p>© 2026 Varsha Omar | Student Productivity & Portfolio</p>
+    <p>Made with ❤️ using HTML, CSS & JavaScript</p>
+</footer>
 </body>
 </html>
