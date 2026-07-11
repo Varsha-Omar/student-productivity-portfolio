@@ -1,38 +1,32 @@
 # Student Productivity & Portfolio Web Application
 
-This project is made as part of my Web Development Internship.
-
----
-
-## Technologies Used
-- HTML
-- CSS
-- JavaScript
-
----
-
-## Completed Tasks
-
-### Task 1 - Portfolio Website
-- Navigation Bar
-- Introduction Section
-- Profile Image
-- LinkedIn & GitHub Links
-- JavaScript Alert Button
-
----
-
-### Task 2 - Dynamic To-Do List
-- Add new tasks
-- Delete tasks
-- JavaScript DOM manipulation
-- Simple interactive UI
-
----
+This project is developed as part of my Web Development Internship at ApexPlanet.
 
 ## About Project
-This project includes basic web development features and JavaScript functionality to improve frontend skills.
 
----
+Student Productivity & Portfolio Web Application is a responsive web-based project designed to help students manage their daily tasks and showcase useful productivity features in one place.
 
- 
+## Features
+
+✅ Weather App - Get live weather updates using API  
+✅ To-Do List - Add and manage daily tasks using Local Storage  
+✅ Quiz App - Interactive quiz with timer and score tracking  
+✅ Product Gallery - Filter and sort products easily  
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+
+## Project Highlights
+
+- Responsive user interface
+- Interactive features
+- API integration
+- Local Storage implementation
+- Improved UI design and optimization
+
+## Internship
+
+Developed as part of Web Development Internship at ApexPlanet.
